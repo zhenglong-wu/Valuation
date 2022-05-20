@@ -11,10 +11,9 @@ from scipy.stats import pearsonr
 from Fundamentals import Fundamentals
 from ApiManager import ApiManager
 
-class Dcf:
+class DCF:
 
-    def __init__(self, apiManager: ApiManager, fundamentals: Fundamentals):
-        self.apiManager = apiManager
+    def __init__(self, fundamentals: Fundamentals):
         self.fundamentals = fundamentals
 
     def calcIntrinsicvalue(self):
