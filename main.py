@@ -2,13 +2,19 @@
 from this import d
 from ApiManager import ApiManager
 from Fundamentals import Fundamentals
-from Dcf import Dcf
+from DCF import DCF
+from CFROI import CFROI
+from Ratios import Ratios
 
-ticker = 'RTX'
+ticker = 'AAPL'
 apiManager = ApiManager(ticker=ticker)
 fundamentals = Fundamentals(ticker=ticker, apiManager=apiManager)
 
-dcf = Dcf(apiManager=apiManager, fundamentals=fundamentals)
+dcf = DCF(fundamentals=fundamentals)
+ncfroi = CFROI(fundamentals=fundamentals)
+ratios = Ratios(fundamentals=fundamentals) 
+
+print(dcf.calcIntrinsicvalue())
 
 
 
