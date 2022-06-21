@@ -27,7 +27,7 @@ class DCF:
 
         # cost of equity
 
-        riskFreeRate = self.fundamentals.riskFreeRate['data'][0]['value'] / 100
+        riskFreeRate = self.fundamentals.unpack(self.fundamentals.riskFreeRate['data'][0]['value']) / 100
         expectedReturn = float(0.105)
         beta = self.fundamentals.unpack(self.fundamentals.metrics['Beta'])
         costOfEquity = riskFreeRate + (beta * (expectedReturn - riskFreeRate))

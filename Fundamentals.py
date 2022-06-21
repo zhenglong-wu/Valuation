@@ -18,4 +18,3 @@ class Fundamentals:
             return float(0)
         else:
             return float(input)
-
